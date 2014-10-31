@@ -906,7 +906,7 @@ footer .owner p a {
 li {
 text-decoration: none;
 display: inline-block;
-text-decoration-color: green;
+color: #458B00;
 }
 
 .highlight  { background: #ffffff; }
