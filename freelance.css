@@ -33,7 +33,7 @@ h1, label, p, h3 {
 .jumbotron {
     display: block;
     background-color: #24436d;
-    color: antiquewhite;
+    color: #FFFFFF;
 }
 
 #social img {
@@ -55,7 +55,7 @@ h1, label, p, h3 {
     margin:0 auto;
     margin-bottom: 70px;
     margin-top: 50px;
-    
+
 }
 
 #jumbo2 {
@@ -86,7 +86,7 @@ h1, label, p, h3 {
     margin-bottom: 0px;
     padding-bottom: 100;
     padding-top: 100px;
-    
+
 }
 
 
@@ -101,6 +101,3 @@ footer {
     padding-bottom: 100px;
     background-color: #373A42;
 }
-
-
-
