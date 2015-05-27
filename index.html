@@ -1,141 +1,213 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Ben Swift | Home</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/jquery.scrolly.min.js"></script>
-		<script src="js/jquery.onvisible.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-			<link rel="stylesheet" href="css/style-noscript.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-		<!--favicon-->
-		<link type="image/x-icon" rel="icon" href="favicon.ico">
-		<link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
-	</head>
-	<body class="homepage">
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta charset="utf-8">
+    <title>Ben Swift</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
-		<!-- Header -->
-			<div id="header">
+      <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="freelance.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://code.angularjs.org/1.3.9/angular.min.js"></script>
+    <script src="freelance.js"></script>
+  </head>
+  <body>
+    <script>
+        $(document).ready(function() {
+            $(".nav").hide().show(1000);
+        });
+    </script>
+    <nav class="navbar navbar-default navbar-fixed-top">
 
-				<!-- Inner -->
-					<div class="inner">
-						<header>
-							<h1><a href="index.html" id="logo">Ben Swift</a></h1>
-							<hr />
-							<p>a developer and designer</p>
-						</header>
-						<footer>
-							<a href="#banner" class="button circled scrolly">More</a>
-						</footer>
-					</div>
+      <div class="container">
+          <a class="navbar-brand" href="#">Ben Swift</a>
+          <!--<p class="navbar-text navbar-right">OptimalBit Freelance</p>-->
+          <ul class="nav navbar-nav navbar-right">
+            <li role="presentation"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#about">About</a></li>
+            <li role="presentation"><a href="mailto:optimalbit@gmail.com">Hire us</a></li>
+          </ul>
+      </div>
+    </nav>
+    <section>
+    <div class="jumbotron">
+       <div id="jumbo">
+        <h1>Ben Swift</h1>
+        <p>a designer and developer</p>
+        <p><a class="btn btn-primary btn-lg" href="#about" role="button">Learn More</a></p>
+        </div>
+    </div>
 
-				<!-- Nav
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="">About</a>
-							</li>
-							<li><a href="">Contact</a></li>
-							<li><a href="">Projects</a></li>
-							<li><a href="">Other</a></li>
-						</ul>
-					</nav> -->
+    <div ng-controller="mainController" id="about">
 
-			</div>
 
-		<!-- Banner -->
-			<section class="banner" id="banner">
-				<header>
-						<h2>Hi. I'm a Web Developer and iOS Developer. My skills <strong>include.</strong>.</h2>
-					<p>
-						<a href="">HTML/CSS + JavaScript</a>
-
-					</p>
-					<p>
-						<a href="">Swift</a>
-					</p>
-					<p>
-						<a href="">Ruby</a>
-					</p>
-					<p>
-						<a href="">Python</a>
-					</p>
-					<p>
-						<a href="">R</a>
-					</p>
-				</header>
-			</section>
-
-			<section class="banner2">
-				<header>
-					<h2>My projects <strong>include.</strong>.</h2>
-					<p>
-						<a href="">RamCenter</a>
-
-					</p>
-					<!--<p>
-						<a href="http://www.codemonks.click/">Code Monks</a>
-					</p>-->
-					<p>
-						<a href="">Agogio</a>
-					</p>
-				</header>
-			</section>
+      <!--<label>Please type your name:</label>
+      <input type="text" ng-model="name">-->
 
 
 
+      <h1 class="middle">Hello!</h1>
+      <h3 class="middle">Here you can hire us to build something for you.</h3>
 
-		<!-- Footer -->
-			<div id="footer">
-				<div class="container">
-					<div class="row">
+      <h3 class="middle">Here is what we can do for you:</h3>
+
+      <ul class="list">
+        <li class="list" ng-repeat="option in options">{{option.optionName}}</li>
+      </ul>
+
+      <!--rows-->
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+	       <div class="col-md-3">
+
+
+                <h3>Web</h3>
+                <p>We enjoy making websites. We are working hard to perfect our skills in web to help you build your website.</p>
+
+
+
+            </div>
+            <div class="col-md-3">
+
+
+                <h3>Video</h3>
+                <p>We will help you edit your videos and get them ready for production!</p>
+
+
+
+            </div>
+
+            <div class="col-md-3">
+
+
+                <h3>Marketing</h3>
+                <p>Marketing is hard! So we are going to help you! We will do all the SEO to make sure your all set up.</p>
+
+
+
+            </div>
+
+            <div class="col-md-3">
+
+
+                  <h3>Suggestions</h3>
+                  <p>We would really like to help you on much more as well! So let us know and we will let you know. ;)</p>
+
+
+
+             </div>
+
+            </div>
+        </div>
+    </div>
+     <!--<h3 class="middle">How we finish projects:</h3>
+      Progress bar
+      <div class="progress" id="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+            <span class="sr-only">100% Complete</span>
+            <p>100% Complete</p>
+      </div>
+      </div>-->
+      <h1 class="middle">Contact us</h1>
+    <div class="container">
+        <div class="row" id="skills">
+	       <div class="col-md-4">
+
+                <!--<img src="images/group.png" alt="Group">-->
+                <h3 style="margin-left: 20px">Our team includes Vipul, Alex, and Ben</h3>
 
 
 
 
+            </div>
+
+            <div class="col-md-4">
+
+                <!--<img src="images/chat.png" alt="Chat">-->
+                <h3 style="margin-left: 20px">Chat with us: @optimalbit</h3>
 
 
-							<!-- Contact -->
-								<section class="contact">
-									<header>
-										<h3>Contact me:</h3>
-									</header>
-									<p>Keep up with the latest:</p>
-									<ul class="icons">
-										<li><a href="https://twitter.com/benswift404" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="https://www.facebook.com/groups/1453150204931955/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-										<li><a href="http://instagram.com/benswift404" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 
-										<li><a href="https://dribbble.com/benswift404" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-										<li><a href="https://www.linkedin.com/profile/view?id=382016401&trk=spm_pic" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-									</ul>
-								</section>
 
-							<!-- Copyright -->
-								<div class="copyright">
-									<ul class="menu">
-										<li>&copy; Ben Swift. 2015. All rights reserved.<strong><a href="http://html5up.net/"> Design: HTML5up</a></li>
-									</ul>
-								</div>
+            </div>
 
-						</div>
+            <div class="col-md-3">
 
-					</div>
-				</div>
-			</div>
+                    <!--<img src="images/cal.png" alt="calender">-->
+                    <h3 style="margin-left: 20px">We are flexible time wise</h3>
 
-	</body>
+
+
+             </div>
+
+            </div>
+        </div>
+    <div class="jumbotron" id="jumbo2">
+       <div class="container">
+        <h2 class="middle" id="contact">So what are you waiting for?</h2>
+        <p class="middle"><a class="btn btn-primary btn-lg" href="mailto:optimalbit@gmail.com" role="button">Contact us!</a></p>
+        </div>
+
+    </div>
+    <!--<div class="jumbotron" id="team">
+        <div class="container">
+           <h2 class="middle">OB Freelancers</h2>
+            <div class="row">
+                <div class="col-sm-4 col-md-4">
+                    <div class="thumbnail">
+                        <img src="images/ben2.png" alt="">
+                        <div class="caption" class="team">
+                            <h3>Ben Swift</h3>
+                            <p>Hi! I'm a Web Developer and iOS Developer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-md-4">
+                    <div class="thumbnail">
+                        <img src="images/vipul.png" alt="">
+                        <div class="caption" class="team">
+                            <h3>Vipul Periwal</h3>
+                            <p>Hi! I edit videos and occasionally like to code!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-md-4">
+                    <div class="thumbnail">
+                        <img src="images/alex.png" alt="">
+                        <div class="caption" class="team">
+                            <h3>Alex Hotham</h3>
+                            <p>I'm a HUGE hockey fan, and great with marketing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>-->
+
+    </div>
+    </section>
+    <footer>
+        <ul id="social" class="middle">
+            <li><a href="https://www.facebook.com/obfreelance"><img src="images/facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://twitter.com/optimalbit/"><img src="images/twitter2.png" alt="Twitter"></a></li>
+
+        </ul>
+        <h3 class="middle"><a class="twitter-timeline" href="https://twitter.com/optimalbit" data-widget-id="583700190751756288">Tweets by @optimalbit</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></h3>
+        <p class="middle">&copy; OptimalBit - 2015</p>
+    </footer>
+
+  </body>
 </html>
