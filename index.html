@@ -13,7 +13,7 @@
    
     <style is="custom-style">
         paper-toolbar {
-            --paper-toolbar-background: #4791cf;
+            --paper-toolbar-background: #2196F3;
             font-size: 20px;
         }
         iron-icon[icon="android"] {
@@ -21,23 +21,18 @@
             height: 32px;
             width: 32px;
             padding-right: 10px;
-        }
-        iron-icon[icon="polymer"] {
-            color: rebeccapurple;
-            height: 32px;
-            width: 32px;
             position: absolute;
             right: 0px;
             top: 14px;
             margin-right: 40px;
         }
         paper-tabs {
-            --paper-tab-color: green;
             position: absolute;
             right: 0px;
             top: 6px;
             margin-right: 100px;
             font-size: 18px;
+            --paper-tabs-selection-bar-color: #FFC107;
         }
     
     </style>
@@ -46,19 +41,24 @@
         
         <paper-header-panel flex>
             <paper-toolbar>
-               <iron-icon icon="android"></iron-icon>
+                <paper-icon-button icon="menu"></paper-icon-button>
                 <div>Ben Swift</div>
-                <paper-tabs selected="{{selected}}">
+                <paper-tabs selected="{{selected}}" noink>
                       <paper-tab>Home</paper-tab>
                       <paper-tab>About</paper-tab>
                       <paper-tab>Contact</paper-tab>
                 </paper-tabs>
-                <iron-icon icon="polymer"></iron-icon>
+                <iron-icon icon="android"></iron-icon>
             </paper-toolbar>
             <div class="container" fit layout vertical>
                 <iron-pages selected="{{selected}}">
                     <section>
-                        <h1>Hello, world!</h1>
+                        <my-first-element></my-first-element>
+                        <google-feeds feed='http://www.engadget.com/rss-full.xml'
+  results="{{result}}"></google-feeds>
+                        <h1>Feed title: <span>{{result.title}}</span></h1>
+                        <h1>Feed title: <span>{{result.description}}</span></h1>
+                        <paper-fab icon="add"></paper-fab>
                     </section>
                     <section>
                         <h1>About</h1>
