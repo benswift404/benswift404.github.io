@@ -1,0 +1,39 @@
+#built_polymer {
+    position: absolute;
+    right: 50px;
+    bottom: -5px;
+}
+iron-icon[icon="polymer"] {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    
+}
+
+#result {
+    position: absolute;
+    right: 500px;
+    bottom: 415px;
+    text-align-last: center;
+}
+
+#rise {
+    position: absolute;
+    right: 603px;
+    bottom: 370px;
+    text-align-last: center;
+}
+
+#run {
+    position: absolute;
+    right: 603px;
+    bottom: 325px;
+    text-align-last: center;
+}
+#btn1 {
+    margin-left: 10px;
+    margin-top: 20px;
+}
+#btn2 {
+    margin-left: 290px;
+}
