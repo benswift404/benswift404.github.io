@@ -17,15 +17,26 @@
             font-size: 20px;
         }
         iron-icon[icon="android"] {
-            color: green;
-            height: 50px;
-            width: 50px;
-            margin-left: 15px;
-            margin-top: 15px;
+            color: lightgreen;
+            height: 32px;
+            width: 32px;
+            padding-right: 10px;
+        }
+        iron-icon[icon="polymer"] {
+            color: rebeccapurple;
+            height: 32px;
+            width: 32px;
+            position: absolute;
+            right: 0px;
+            top: 12px;
+            margin-right: 15px;
         }
         paper-tabs {
             --paper-tab-color: green;
-            padding-left: 800px;
+            position: absolute;
+            right: 0px;
+            top: 6px;
+            margin-right: 80px;
         }
     
     </style>
@@ -34,12 +45,14 @@
         
         <paper-header-panel flex>
             <paper-toolbar>
+               <iron-icon icon="android"></iron-icon>
                 <div>Ben Swift</div>
                 <paper-tabs selected="{{selected}}">
                       <paper-tab>Home</paper-tab>
                       <paper-tab>About</paper-tab>
                       <paper-tab>Contact</paper-tab>
                 </paper-tabs>
+                <iron-icon icon="polymer"></iron-icon>
             </paper-toolbar>
             <div class="container" fit layout vertical>
                 <iron-pages selected="{{selected}}">
