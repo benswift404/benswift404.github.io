@@ -37,3 +37,8 @@ iron-icon[icon="polymer"] {
 #btn2 {
     margin-left: 290px;
 }
+#name {
+    position: absolute;
+    right: 20px;
+    top: 0px;
+}
