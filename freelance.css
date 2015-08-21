@@ -39,6 +39,10 @@ h1, label, p, h3 {
     background-size: 100% 100%;
     margin-bottom: -50px;
 }
+.navbar-default {
+    background-color: #24436d;
+    border-color: #E7E7E7;
+}
 
 .navbar-default .navbar-nav > li > a:hover {
     color: cadetblue;
