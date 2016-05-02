@@ -31,7 +31,7 @@ Now if you go into Main.storyboard and drag a __UIView__ onto the screen, in the
 
 ![image](/assets/article_images/2016-05-02-inspectables-swift/cornerRadius.png)
 
-Run the app in the simulator, and you will now see that you view has a cornerRadius of whatever you chose to set it as.
+Run the app in the simulator, and you will now see that your view has a cornerRadius of whatever you chose to set it as.
 
 ![image](/assets/article_images/2016-05-02-inspectables-swift/sim_view.png)
 
