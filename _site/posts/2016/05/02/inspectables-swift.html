@@ -7,8 +7,8 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Welcome to my Blog!</title>
-  <meta name="description" content="Welcome to my Blog! Here, I will mostly discuss things about programming and design :]. I decided to make a blog because I want to share cool things with people who follow my stuff. You can always ..." />
+  <title>IBInspectables using Swift</title>
+  <meta name="description" content="Sometimes writing code over and over again for something can be annoying and tedious. Actually, it’s always tedious. If you’re one who tends to change an attribute of a UIKit element constantly but..." />
 
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -17,24 +17,24 @@
   
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@swifty404" />
-    <meta name="twitter:title" content="Welcome to my Blog!" />
-    <meta name="twitter:image" content="http://myblog.***.***/assets/images/author.jpg" />
+    <meta name="twitter:title" content="IBInspectables using Swift" />
+    <meta name="twitter:image" content="http://swift404.com/assets/images/author.jpg" />
     
-    <meta name="twitter:description"  content="Welcome to my Blog! Here, I will mostly discuss things about programming and design :]. I decided to make a blog because I want to share cool things with people who follow my stuff. You can always ..." />
+    <meta name="twitter:description"  content="Sometimes writing code over and over again for something can be annoying and tedious. Actually, it’s always tedious. If you’re one who tends to change an attribute of a UIKit element constantly but..." />
     
   
 
   <meta property="og:site_name" content="Ben Swift" />
-  <meta property="og:title" content="Welcome to my Blog!"/>
+  <meta property="og:title" content="IBInspectables using Swift"/>
   
-  <meta property="og:description" content="Welcome to my Blog! Here, I will mostly discuss things about programming and design :]. I decided to make a blog because I want to share cool things with people who follow my stuff. You can always ..." />
+  <meta property="og:description" content="Sometimes writing code over and over again for something can be annoying and tedious. Actually, it’s always tedious. If you’re one who tends to change an attribute of a UIKit element constantly but..." />
   
-  <meta property="og:image" content="http://myblog.***.***/assets/article_images/2014-08-29-welcome-to-blog/desktop.jpg" />
-  <meta property="og:url" content="http://myblog.***.***/jekyll/update/2014/08/29/welcome-to-blog.html" >
+  <meta property="og:image" content="http://swift404.com/assets/article_images/2016-05-02-inspectables-swift/ibspectable_view.png" />
+  <meta property="og:url" content="http://swift404.com/posts/2016/05/02/inspectables-swift.html" >
   <meta property="og:type" content="blog" />
-  <meta property="article:published_time" content="2014-08-29T10:34:25-04:00">
+  <meta property="article:published_time" content="2016-05-02T09:19:15-04:00">
 
-  <link rel="canonical" href="http://myblog.***.***/jekyll/update/2014/08/29/welcome-to-blog.html"/>
+  <link rel="canonical" href="http://swift404.com/posts/2016/05/02/inspectables-swift.html"/>
   <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/png"/>
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -46,7 +46,7 @@
   <body itemscope itemtype="http://schema.org/Article">
     <!-- header start -->
 
-<a href="http://myblog.***.***" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/author.jpg)"></span></a>
+<a href="http://swift404.com" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/author.jpg)"></span></a>
 
 <!-- header end -->
 
@@ -54,19 +54,19 @@
       <article class="post">
         
         <div class="article-image">
-          <div class="post-image-image" style="background-image: url(/assets/article_images/2014-08-29-welcome-to-blog/desktop.jpg)">
+          <div class="post-image-image" style="background-image: url(/assets/article_images/2016-05-02-inspectables-swift/ibspectable_view.png)">
             Article Image
           </div>
           <div class="post-image-image2" style="background-image: url()">
             Article Image
           </div>
           <div class="post-meta">
-            <h1 class="post-title">Welcome to my Blog!</h1>
+            <h1 class="post-title">IBInspectables using Swift</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Ben Swift</h4>
               on
-              <time datetime="2014-08-29 10:34">29 Aug 2014</time>
+              <time datetime="2016-05-02 09:19">02 May 2016</time>
               <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
             </div>
             <div style="text-align:center">
@@ -80,15 +80,54 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>Welcome to my Blog! Here, I will mostly discuss things about programming and design :]. I decided to make a blog because I want to share cool things with people who follow my stuff. You can always contact me through Twitter <a href="https://twitter.com/swifty404">@swifty404</a>.</p>
+          <p>Sometimes writing code over and over again for something can be annoying and tedious. Actually, it’s always tedious. If you’re one who tends to change an attribute of a <strong>UIKit</strong> element constantly but you can only do it through code, this post is for you. Let’s get started.</p>
 
+<p><strong>IBInspectables</strong> are essentially user-defined runtime attributes. To get started, open up a new project in Xcode. Single view application. We are going to create an extension of <strong>UIView</strong> that will allow us to define an <strong>IBInspectable</strong> for the cornerRadius. This can also be done with <strong>UIImageView.</strong>
+Create a new file in the file hierarchy in Xcode and choose Swift file. Name the file UIView+cornerRadius. Once the file is created, make sure you import UIKit at the top of the file.</p>
+
+<p>Now, add the following code to <strong>UIView+cornerRadius.swift</strong>:</p>
+
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">extension</span> <span class="bp">UIView</span> <span class="p">{</span>
+    <span class="p">@</span><span class="n">IBInspectable</span> <span class="k">var</span> <span class="nl">cornerRadius</span><span class="p">:</span> <span class="n">CGFloat</span> <span class="p">{</span>
+      <span class="kr">get</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">layer</span><span class="p">.</span><span class="n">cornerRadius</span>
+      <span class="p">}</span>
+      <span class="kr">set</span> <span class="p">{</span>
+        <span class="n">layer</span><span class="p">.</span><span class="n">cornerRadius</span> <span class="o">=</span> <span class="n">newValue</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span></code></pre></div>
+
+<p>Here we create an extension of <strong>UIView</strong>. We then define the <strong>IBInspectable</strong> and its get and set methods.</p>
+
+<p>Now if you go into Main.storyboard and drag a <strong>UIView</strong> onto the screen, in the attributes inspector you will now see a cornerRadius property in which you can set for the <strong>UIView</strong> you just dragged onto the view.</p>
+
+<p><img src="/assets/article_images/2016-05-02-inspectables-swift/cornerRadius.png" alt="image" /></p>
+
+<p>Run the app in the simulator, and you will now see that you view has a cornerRadius of whatever you chose to set it as.</p>
+
+<p><img src="/assets/article_images/2016-05-02-inspectables-swift/sim_view.png" alt="image" /></p>
+
+<p>Now you can always put that file in any of your projects that you wish to have the cornerRadius property in Interface Builder(storyboard). Here are the quick steps:</p>
+
+<ol>
+  <li><em>Create Swift file in Xcode and import UIKit.</em></li>
+  <li><em>Add the extension code above.</em></li>
+  <li><em>Set the value in attributes inspector in storyboard/Interface Builder.</em></li>
+</ol>
+
+<p>I hope you enjoyed this post, if you got something out of it please share with others.</p>
+
+<blockquote>
+  <p>“Simplicity is the ultimate sophistication.” - Da Vinci</p>
+</blockquote>
 
         </section>
         <footer class="post-footer">
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=Welcome+to+my+Blog%21&amp;url=http://myblog.***.***/jekyll/update/2014/08/29/welcome-to-blog"
+                <a class="icon-twitter" href="http://twitter.com/share?text=IBInspectables+using+Swift&amp;url=http://swift404.com/posts/2016/05/02/inspectables-swift"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -106,7 +145,7 @@
               <h4>Ben Swift</h4>
               <p class="bio"></p>
               <hr>
-              <p class="published">Published <time datetime="2014-08-29 10:34">29 Aug 2014</time></p>
+              <p class="published">Published <time datetime="2016-05-02 09:19">02 May 2016</time></p>
             </section>
           </div>
           

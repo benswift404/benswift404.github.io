@@ -4,11 +4,82 @@
     <title>Ben Swift</title>
     <description>develop, design, inspire
 </description>
-    <link>http://myblog.***.***/</link>
-    <atom:link href="http://myblog.***.***/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 02 May 2016 13:09:24 -0400</pubDate>
-    <lastBuildDate>Mon, 02 May 2016 13:09:24 -0400</lastBuildDate>
+    <link>http://swift404.com/</link>
+    <atom:link href="http://swift404.com/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Mon, 02 May 2016 15:02:28 -0400</pubDate>
+    <lastBuildDate>Mon, 02 May 2016 15:02:28 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>IBInspectables using Swift</title>
+        <description>&lt;p&gt;Sometimes writing code over and over again for something can be annoying and tedious. Actually, it’s always tedious. If you’re one who tends to change an attribute of a &lt;strong&gt;UIKit&lt;/strong&gt; element constantly but you can only do it through code, this post is for you. Let’s get started.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IBInspectables&lt;/strong&gt; are essentially user-defined runtime attributes. To get started, open up a new project in Xcode. Single view application. We are going to create an extension of &lt;strong&gt;UIView&lt;/strong&gt; that will allow us to define an &lt;strong&gt;IBInspectable&lt;/strong&gt; for the cornerRadius. This can also be done with &lt;strong&gt;UIImageView.&lt;/strong&gt;
+Create a new file in the file hierarchy in Xcode and choose Swift file. Name the file UIView+cornerRadius. Once the file is created, make sure you import UIKit at the top of the file.&lt;/p&gt;
+
+&lt;p&gt;Now, add the following code to &lt;strong&gt;UIView+cornerRadius.swift&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;extension&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIView&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IBInspectable&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;cornerRadius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CGFloat&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;kr&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cornerRadius&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;kr&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cornerRadius&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newValue&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here we create an extension of &lt;strong&gt;UIView&lt;/strong&gt;. We then define the &lt;strong&gt;IBInspectable&lt;/strong&gt; and its get and set methods.&lt;/p&gt;
+
+&lt;p&gt;Now if you go into Main.storyboard and drag a &lt;strong&gt;UIView&lt;/strong&gt; onto the screen, in the attributes inspector you will now see a cornerRadius property in which you can set for the &lt;strong&gt;UIView&lt;/strong&gt; you just dragged onto the view.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/article_images/2016-05-02-inspectables-swift/cornerRadius.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Run the app in the simulator, and you will now see that you view has a cornerRadius of whatever you chose to set it as.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/article_images/2016-05-02-inspectables-swift/sim_view.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now you can always put that file in any of your projects that you wish to have the cornerRadius property in Interface Builder(storyboard). Here are the quick steps:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;em&gt;Create Swift file in Xcode and import UIKit.&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Add the extension code above.&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Set the value in attributes inspector in storyboard/Interface Builder.&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I hope you enjoyed this post, if you got something out of it please share with others.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Simplicity is the ultimate sophistication.” - Da Vinci&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Mon, 02 May 2016 09:19:15 -0400</pubDate>
+        <link>http://swift404.com/posts/2016/05/02/inspectables-swift.html</link>
+        <guid isPermaLink="true">http://swift404.com/posts/2016/05/02/inspectables-swift.html</guid>
+        
+        <category>featured</category>
+        
+        
+        <category>posts</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to my Blog!</title>
+        <description>&lt;p&gt;Welcome to my Blog! Here, I will mostly discuss things about programming and design :]. I decided to make a blog because I want to share cool things with people who follow my stuff. You can always contact me through Twitter &lt;a href=&quot;https://twitter.com/swifty404&quot;&gt;@swifty404&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 01 May 2016 10:34:25 -0400</pubDate>
+        <link>http://swift404.com/posts/2016/05/01/welcome-to-blog.html</link>
+        <guid isPermaLink="true">http://swift404.com/posts/2016/05/01/welcome-to-blog.html</guid>
+        
+        <category>featured</category>
+        
+        
+        <category>posts</category>
+        
+      </item>
     
       <item>
         <title>Mediator Features</title>
@@ -53,33 +124,13 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Sun, 30 Nov 2014 09:34:25 -0500</pubDate>
-        <link>http://myblog.***.***/mediator/feature/2014/11/30/mediator_features.html</link>
-        <guid isPermaLink="true">http://myblog.***.***/mediator/feature/2014/11/30/mediator_features.html</guid>
-        
-        <category>featured</category>
+        <link>http://swift404.com/mediator/feature/2014/11/30/mediator_features.html</link>
+        <guid isPermaLink="true">http://swift404.com/mediator/feature/2014/11/30/mediator_features.html</guid>
         
         
         <category>mediator</category>
         
         <category>feature</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to my Blog!</title>
-        <description>&lt;p&gt;Welcome to my Blog! Here, I will mostly discuss things about programming and design :]. I decided to make a blog because I want to share cool things with people who follow my stuff. You can always contact me through Twitter &lt;a href=&quot;https://twitter.com/swifty404&quot;&gt;@swifty404&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 29 Aug 2014 10:34:25 -0400</pubDate>
-        <link>http://myblog.***.***/jekyll/update/2014/08/29/welcome-to-blog.html</link>
-        <guid isPermaLink="true">http://myblog.***.***/jekyll/update/2014/08/29/welcome-to-blog.html</guid>
-        
-        <category>featured</category>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
         
       </item>
     
