@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" width="device-width" initial-scale="1.0">
+        <title>Polymer Slope Calculator</title>
+        <script src="slope-app/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+        <link rel="import" href="slope-app/bower_components/polymer/polymer.html">
+        <link rel="import" href="slope-app/elements.html">
+        <link rel="stylesheet" href="slope-app/app.css">
+    </head>
+    <body unresolved class="fullbleed layout vertical">
+        <style is="custom-style">
+            paper-toolbar {
+            --paper-toolbar-background: #2196F3;
+                
+            }
+            form {
+                margin-left: 50px;
+                margin-top: 50px;
+            }
+            h1 {
+                margin-left: 50px;
+            }
+            #desc {
+                margin-left: 50px;
+            }
+            paper-fab {
+                background-color: #FFC107;
+            }
+            input {
+                font-size: 30px;    
+            }
+            iron-icon[icon="polymer"] {
+                color: #673AB7;
+                height: 32px;
+                width: 32px;
+            }
+        </style>
+        <paper-header-panel flex>
+            <paper-toolbar>
+                <paper-icon-button icon="menu"></paper-icon-button>
+                <div>
+                    <h3>Polymer Slope Calculator</h3>
+                </div>
+                <h3 id="name">By Swift Development</h3>
+            </paper-toolbar>
+            <div class="container">
+                <h1>Welcome to the Polymer Slope Calculator!</h1>
+                <h3 id="desc">Type in your x and y coordinates and click calculate to get the slope</h3>
+                <form>
+                    <strong>X1:</strong> <input type="text" id="x1">
+                    <br>
+                    <br>
+                    <strong>Y1:</strong> <input type="text" id="y1">
+                    <br>
+                    <br>
+                    <strong>X2:</strong> <input type="text" id="x2">
+                    <br>
+                    <br>
+                    <strong>Y2:</strong> <input type="text" id="y2">
+                </form>
+                <paper-fab id="btn2" icon="clear"></paper-fab>
+                <paper-fab id="btn1" icon="chevron-right"></paper-fab>
+                <h2 id="result"></h2>
+                <h2 id="rise"></h2>
+                <h2 id="run"></h2>
+                <iron-icon icon="polymer"></iron-icon>
+            </div>
+                
+        </paper-header-panel>
+        
+        <script src="slope-app/app.js"></script>
+    </body>
+</html>
