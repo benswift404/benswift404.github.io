@@ -6,8 +6,8 @@
 </description>
     <link>http://swift404.com/</link>
     <atom:link href="http://swift404.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 02 May 2016 15:05:03 -0400</pubDate>
-    <lastBuildDate>Mon, 02 May 2016 15:05:03 -0400</lastBuildDate>
+    <pubDate>Mon, 02 May 2016 15:07:02 -0400</pubDate>
+    <lastBuildDate>Mon, 02 May 2016 15:07:02 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -73,8 +73,6 @@ Create a new file in the file hierarchy in Xcode and choose Swift file. Name the
         <pubDate>Sun, 01 May 2016 10:34:25 -0400</pubDate>
         <link>http://swift404.com/posts/2016/05/01/welcome-to-blog.html</link>
         <guid isPermaLink="true">http://swift404.com/posts/2016/05/01/welcome-to-blog.html</guid>
-        
-        <category>featured</category>
         
         
         <category>posts</category>
