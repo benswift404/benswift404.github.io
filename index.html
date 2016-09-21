@@ -1,95 +1,90 @@
----
-layout: default
----
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Ben Swift</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
 
-<div class="teaserimage">
-    <div class="teaserimage-image" {% if site.cover %}style="background-image: url({{ site.cover }})"{% endif %}>
-        Teaser Image
-    </div>
-</div>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-<header class="blog-header">
-    {% if site.logo %}
-      <a class="blog-logo" href="{{site.url}}" style="background-image: url('{{ site.logo }}')">{{ site.title }}</a>
-    {% endif %}
-    <h1 class="blog-title">{{ site.title }}</h1>
-    <h2 class="blog-description">{{ site.description }}</h2>
-    <div class="custom-links">
-      {% for social in site.social %}
-        {% if social.url %}
-            <a class="icon-{{ social.icon }}" href="{{ social.url }}" {% if social.desc %} title="{{ social.desc }}"{% endif %}">
-              <i class="fa fa-{{ social.icon }}"></i>
-            </a>
-            &nbsp;&nbsp;·&nbsp;&nbsp;
-        {% endif %}
-      {% endfor %}
-      <a href="/about/">About</a>
-    </div>
-</header>
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="images/ben.png" alt="Ben Swift" /></span>
+							<h1>Ben Swift</h1>
+							<p>ui ux designer and ios developer</p>
+						</header>
+						<!--
+						<hr />
+						<h2>Extra Stuff!</h2>
+						<form method="post" action="#">
+							<div class="field">
+								<input type="text" name="name" id="name" placeholder="Name" />
+							</div>
+							<div class="field">
+								<input type="email" name="email" id="email" placeholder="Email" />
+							</div>
+							<div class="field">
+								<div class="select-wrapper">
+									<select name="department" id="department">
+										<option value="">Department</option>
+										<option value="sales">Sales</option>
+										<option value="tech">Tech Support</option>
+										<option value="null">/dev/null</option>
+									</select>
+								</div>
+							</div>
+							<div class="field">
+								<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
+							</div>
+							<div class="field">
+								<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
+							</div>
+							<div class="field">
+								<label>But are you a robot?</label>
+								<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
+								<input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
+							</div>
+							<ul class="actions">
+								<li><a href="#" class="button">Get Started</a></li>
+							</ul>
+						</form>
+						<hr />
+						-->
+						<footer>
+							<ul class="icons">
+								<li><a href="https://twitter.com/swifty404" class="fa-twitter">Twitter</a></li>
+								<li><a href="https://www.instagram.com/thebenswift/" class="fa-instagram">Instagram</a></li>
+								<li><a href="https://www.snapchat.com/add/cronkernel" class="fa-snapchat">Snapchat</a></li>
+							</ul>
+						</footer>
+					</section>
 
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Ben Swift</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
 
-<main class="content" role="main">
+			</div>
 
-    {% if site.tags.featured %}
-    <h5 class="index-headline featured"><span>Featured</span></h5>
+		<!-- Scripts -->
+			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
 
-    <div class="container featured">
-      {% for post in site.tags.featured %}
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-          <div class="article-item">
-            <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
-            </header>
-            <section class="post-excerpt" itemprop="description">
-              <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
-            </section>
-            <div class="post-meta">
-              <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
-  <!--            <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>-->
-            </div>
-          </div>
-        </article>
-      {% endfor %}
-    </div>
-
-    <h5 class="index-headline normal"><span>Regular</span></h5>
-    {% endif %}
-
-    <div class="cf frame">
-      {% for post in paginator.posts %}
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-          <div class="article-item">
-            <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
-            </header>
-            <section class="post-excerpt" itemprop="description">
-              <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
-            </section>
-            <div class="post-meta">
-              <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
-<!--            <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>-->
-            </div>
-          </div>
-        </article>
-      {% endfor %}
-    </div>
-
-    <nav class="pagination" role="navigation">
-      {% if paginator.next_page %}
-        <a class="newer-posts" href="/page{{paginator.next_page}}">&larr; Older posts</a>
-      {% endif %}
-      <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-      {% if paginator.previous_page %}
-        {% if paginator.page == 2 %}
-          <a class="older-posts" href="/">Newer posts &rarr;</a>
-        {% else %}
-          <a class="older-posts" href="/page{{paginator.previous_page}}">Newer posts &rarr;</a>
-        {% endif %}
-      {% endif %}
-    </nav>
-
-
-    <!-- {{!! After all the posts, we have the previous/next pagination links }}
-    {{pagination}} -->
-
-</main>
+	</body>
+</html>
