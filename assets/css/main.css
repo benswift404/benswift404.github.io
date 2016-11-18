@@ -19,6 +19,21 @@
 		vertical-align: baseline;
 	}
 
+	#essay {
+		text-transform: none;
+		font-size: 18px;
+		font-family: Helvetica;
+		text-align: left;
+	}
+
+	#back {
+		color: #5C9491;
+	}
+
+	#back:hover {
+		color: #3FFFE2;
+	}
+
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
