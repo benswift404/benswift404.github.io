@@ -6,35 +6,69 @@
 // Duration.
 	$duration: (
 		transition:			0.2s,
-		bg:					1.75s,
-		main:				1s
+		loader-fadein:		1s,
+		bg-fadein:			0.5s
 	);
 
 // Size.
 	$size: (
-		border-radius:		4px,
-		border-width:		1px,
-		element-height:		2.75em,
-		element-margin:		1.5em,
-		letter-spacing:		0.2em
+		element-height:		3em,
+		element-margin:		2em
 	);
 
 // Font.
 	$font: (
-		family:				('Source Sans Pro', Helvetica, sans-serif),
+		family:				('Raleway', 'Helvetica', sans-serif),
 		family-fixed:		('Courier New', monospace),
-		weight:				300
+		weight:				400,
+		weight-bold:		700,
+		weight-heavy:		800
 	);
 
 // Palette.
 	$palette: (
-		bg:					#ffffff,
-		bg-alt:				#e1dfe8,
-		fg:					#414f57,
-		fg-bold:			#313f47,
-		fg-light:			#616f77,
-		border:				#c8cccf,
-		accent1:			#ffa596,
-		accent2:			#00e4ff,
-		highlight:			#ff7496
+		bg:					#fff,
+		fg:					#6f7577,
+		fg-bold:			#61686b,
+		fg-light:			#a8b0b3,
+		fg-lighter:			#e8f0f3,
+		border:				#dddddd,
+		border-bg:			rgba(144,144,144,0.075),
+		border2:			#d3d3d3,
+		border2-bg:			rgba(144,144,144,0.15),
+
+		alt: (
+			fg-bold:		#ffffff,
+			fg:				rgba(255,255,255,0.5),
+			fg-light:		rgba(255,255,255,0.35),
+			fg-lighter:		rgba(255,255,255,0.2),
+			border:			#ffffff,
+			border-bg:		rgba(255,255,255,0.075),
+			border2:		#ffffff,
+			border2-bg:		rgba(255,255,255,0.15)
+		),
+
+		accent1: (
+			bg:				#8cd1a8,
+			fg-bold:		#ffffff,
+			fg:				mix(#8cd1a8, #ffffff, 25%),
+			fg-light:		mix(#8cd1a8, #ffffff, 40%),
+			fg-lighter:		mix(#8cd1a8, #ffffff, 90%),
+			border:			rgba(255,255,255,0.25),
+			border-bg:		rgba(255,255,255,0.075),
+			border2:		rgba(255,255,255,0.5),
+			border2-bg:		rgba(255,255,255,0.2)
+		),
+
+		accent2: (
+			bg:				#313a3d,
+			fg-bold:		#ffffff,
+			fg:				mix(#313a3d, #ffffff, 25%),
+			fg-light:		mix(#313a3d, #ffffff, 40%),
+			fg-lighter:		mix(#313a3d, #ffffff, 90%),
+			border:			rgba(255,255,255,0.25),
+			border-bg:		rgba(255,255,255,0.075),
+			border2:		rgba(255,255,255,0.5),
+			border2-bg:		rgba(255,255,255,0.2)
+		)
 	);
