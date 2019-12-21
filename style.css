@@ -1,0 +1,15 @@
+.gray-text {
+        color: grey;
+}
+
+.cardd {
+        padding-top: 10px;
+}
+
+#profile {
+        vertical-align: middle;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+}
