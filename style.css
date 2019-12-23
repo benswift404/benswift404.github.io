@@ -4,12 +4,13 @@
 
 .cardd {
         padding-top: 10px;
+        align-items: center;
 }
 
 #profile {
         vertical-align: middle;
-        width: 150px;
-        height: 150px;
+        width: 110px;
+        height: 110px;
         border-radius: 50%;
         object-fit: cover;
 }
