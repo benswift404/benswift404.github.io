@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Swift - Work</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.3/dist/alpine.js" defer></script>
+</head>
+<body class="bg-white">
+    <div class="flex flex-col h-screen">
+        <section>
+            <header>
+                <div>
+					<nav x-data="{ open: false }" @keydown.window.escape="open = false" class="my-5 mx-10 md:my-10 md:mx-40 lg:ml-40 lg:mr-40 xl:mr-64 xl:ml-64 mb-10">
+						<div class="mt-12 flex justify-between items-center md:flex-col md:justify-center lg:flex-row lg:justify-between lg:items-center">
+							<a href="index.html"><img class="w-32 md:mb-10 lg:mb-0" src="images/benswift_logo.png" alt="Ben Swift Logo"></a>
+								<div class="hidden md:block">
+									<div class="ml-10 flex items-baseline">
+										<a href="index.html" class="mr-10 font-semibold text-gray-600 text-sm">HOME</a>
+										<a href="about.html" class="mr-10 font-semibold text-gray-600 text-sm">ABOUT</a>
+										<a href="work.html" class="mr-10 font-semibold text-blue-400 text-sm">WORK</a>
+										<a href="blog.html" class="mr-10 font-semibold text-gray-600 text-sm">BLOG</a>
+										<a href="contact.html" class="font-semibold text-gray-600 text-sm">CONTACT</a>
+									</div>
+								</div>
+
+							<div class="-mr-2 flex md:hidden">
+								<button @click="open = !open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white">
+								<svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+									<path :class="{'hidden': open, 'inline-flex': !open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+									<path :class="{'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+								</svg>
+								</button>
+							</div>
+						</div>
+
+						<div :class="{'block': open, 'hidden': !open}" class="hidden md:hidden">
+							<div class="mt-5 px-2 pt-2 pb-3 sm:px-3">
+							  		<a href="index.html" class="mr-10 font-semibold text-gray-600">HOME</a>
+									<a href="about.html" class="block mr-10 mt-2 font-semibold text-gray-600">ABOUT</a>
+									<a href="work.html" class="block mr-10 mt-2 font-semibold text-blue-400">WORK</a>
+									<a href="blog.html" class="block mr-10 mt-2 font-semibold text-gray-600">BLOG</a>
+									<a href="contact.html" class="block mt-2 font-semibold text-gray-600">CONTACT</a>
+							</div>
+						</div>
+					</nav>
+				</div>
+            </header>
+
+            <div class="ml-10 mr-10 mt-5 md:mt-24 md:mx-24 lg:ml-40 lg:mr-40 xl:mr-64 xl:ml-64">
+                <div class="mt-5 pt-5">
+                    <div class="z-0"><h1 class="text-gray-900 font-bold text-6xl mb-2 leading-tight">My work.</h1></div>
+                    <div class="z-10 -ml-1 -mt-8 bg-blue-400 w-48 h-5"></div>
+                </div>
+                <div class="my-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="mt-5">
+                        <img class="w-full object-cover h-56 rounded shadow-lg" src="images/stoicly.png" alt="Stoicly App Image">
+                        <h1 class="pt-3 font-bold text-2xl">Stoicly</h1>
+                        <p class="">This is a description of the Stoicly App!</p>
+                        <button class="mt-2 bg-gray-900 text-gray-100 px-5 py-1 rounded-full"><a href="work_detail.html">Learn more</a></button>
+                    </div>
+                    <div class="mt-5">
+                        <img class="w-full object-cover h-56 rounded shadow-lg" src="images/themainhustle.png" alt="The Maine Hustle Podcast Image">
+                        <h1 class="pt-3 font-bold text-2xl">The Maine Hustle</h1>
+                        <p class="">This is a description of the Stoicly App!</p>
+                        <button class="mt-2 bg-gray-900 text-gray-100 px-5 py-1 rounded-full">Learn more</button>
+                    </div>
+                    <div class="mt-5">
+                        <img class="w-full object-cover h-56 rounded shadow-lg" src="images/swiftfocus.png" alt="SwiftFocus App Development Image">
+                        <h1 class="pt-3 font-bold text-2xl">SwiftFocus Apps</h1>
+                        <p class="">This is a description of the Stoicly App!</p>
+                        <button class="mt-2 bg-gray-900 text-gray-100 px-5 py-1 rounded-full">Learn more</button>
+                    </div>
+                    <div class="mt-5">
+                        <img class="w-full object-cover h-56 rounded shadow-lg" src="images/gorham_compass.png" alt="Gorham Compass Desktop App">
+                        <h1 class="pt-3 font-bold text-2xl">Gorham Compass</h1>
+                        <p class="">This is a description of the Stoicly App!</p>
+                        <button class="mt-2 bg-gray-900 text-gray-100 px-5 py-1 rounded-full">Learn more</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="p-10 bg-gray-100 flex flex-col justify-between items-center">
+			<footer class="">&copy; 2020 Ben Swift. Stay Focused.</footer>
+		</section>
+    </div>
+</body>
+</html>

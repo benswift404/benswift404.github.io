@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Swift - Contact</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.3/dist/alpine.js" defer></script>
+</head>
+<body class="bg-white">
+    <div class="flex flex-col h-screen">
+        <section>
+            <header>
+              <div>
+                <nav x-data="{ open: false }" @keydown.window.escape="open = false" class="my-5 mx-10 md:my-10 md:mx-40 lg:ml-40 lg:mr-40 xl:mr-64 xl:ml-64 mb-10">
+                  <div class="mt-12 flex justify-between items-center md:flex-col md:justify-center lg:flex-row lg:justify-between lg:items-center">
+                    <a href="index.html"><img class="w-32 md:mb-10 lg:mb-0" src="images/benswift_logo.png" alt="Ben Swift Logo"></a>
+                      <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline">
+                          <a href="index.html" class="mr-10 font-semibold text-gray-600 text-sm">HOME</a>
+                          <a href="about.html" class="mr-10 font-semibold text-gray-600 text-sm">ABOUT</a>
+                          <a href="work.html" class="mr-10 font-semibold text-gray-600 text-sm">WORK</a>
+                          <a href="blog.html" class="mr-10 font-semibold text-gray-600 text-sm">BLOG</a>
+                          <a href="contact.html" class="font-semibold text-blue-400 text-sm">CONTACT</a>
+                        </div>
+                      </div>
+      
+                    <div class="-mr-2 flex md:hidden">
+                      <button @click="open = !open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white">
+                      <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                        <path :class="{'hidden': open, 'inline-flex': !open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        <path :class="{'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                      </button>
+                    </div>
+                  </div>
+      
+                  <div :class="{'block': open, 'hidden': !open}" class="hidden md:hidden">
+                    <div class="mt-5 px-2 pt-2 pb-3 sm:px-3">
+                          <a href="index.html" class="mr-10 font-semibold text-gray-600">HOME</a>
+                        <a href="about.html" class="block mr-10 mt-2 font-semibold text-gray-600">ABOUT</a>
+                        <a href="work.html" class="block mr-10 mt-2 font-semibold text-gray-600">WORK</a>
+                        <a href="blog.html" class="block mr-10 mt-2 font-semibold text-gray-600">BLOG</a>
+                        <a href="contact.html" class="block mt-2 font-semibold text-blue-400">CONTACT</a>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </header>
+
+            <div class="ml-10 mr-10 mt-5 md:mt-24 md:mx-24 lg:ml-40 lg:mr-40 xl:mr-64 xl:ml-64">
+                <div class="mt-5 pt-5">
+                    <div class="z-0"><h1 class="text-gray-900 font-bold text-6xl mb-2 leading-tight">Contact.</h1></div>
+                    <div class="z-10 -ml-1 -mt-8 bg-blue-400 w-48 h-5"></div>
+                </div>
+
+                <div class="mt-16">
+                    <form class="w-full max-w-lg mb-20">
+                        <div class="flex flex-wrap -mx-3 mb-6">
+                          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                              First Name
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-first-name" type="text" placeholder="John">
+                          </div>
+                          <div class="w-full md:w-1/2 px-3">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                              Last Name
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe">
+                          </div>
+                          <div class="w-full px-3 py-5">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                              Email
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="john.doe@email.com">
+                          </div>
+                          <div class="w-full px-3 py-1">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                              Message
+                            </label>
+                            <textarea rows="5" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="textarea" placeholder="Message"></textarea>
+                          </div>
+                          <div class="w-full px-3 py-5">
+                            <input class="px-8 py-2 bg-blue-400 hover:bg-blue-500 text-gray-100 font-bold uppercase rounded-full" id="grid-last-name" type="submit" value="Send"></input>
+                          </div>
+                        </div>
+                        <div class="flex flex-wrap -mx-3 mb-6">
+                          
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </section>
+        <section class="p-10 bg-gray-100 flex flex-col justify-between items-center">
+			<footer class="">&copy; 2020 Ben Swift. Stay Focused.</footer>
+		</section>
+    </div>
+</body>
+</html>
